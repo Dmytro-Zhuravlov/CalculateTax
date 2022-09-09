@@ -5,6 +5,6 @@ import java.math.BigDecimal;
 public class VATaxType extends TaxType{
     @Override
     public BigDecimal calculateTax(double amount) {
-        return new BigDecimal(amount * 0.18);
+        return new BigDecimal(amount).multiply(new BigDecimal("0.18"));
     }
 }
